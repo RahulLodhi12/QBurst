@@ -5,8 +5,9 @@ using namespace std;
 int lengthOfLongestSubstring(string s){
     unordered_set<char> st;
     int left = 0;
-
+    
     int maxLen = 0;
+    //only-> right can insert and count.
     for(int right=0;right<s.length();right++){
         if(st.count(s[right])==0){
             st.insert(s[right]);
